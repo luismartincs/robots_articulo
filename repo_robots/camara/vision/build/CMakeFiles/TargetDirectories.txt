@@ -1,0 +1,1 @@
+/home/luismartin/Documentos/RobotsArticulo/camera_agent/build/CMakeFiles/camera_agent.dir
