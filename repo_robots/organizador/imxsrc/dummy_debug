@@ -1,0 +1,5 @@
+(REQUEST
+ :sender  ( agent-identifier :name da1@192.168.15.190:1099/JADE  :addresses (sequence http://luismartin-desktop:7778/acc ))
+ :receiver  (set ( agent-identifier :name robot1@192.168.15.190:1099/JADE ) ( agent-identifier :name robot2@192.168.15.190:1099/JADE ) ( agent-identifier :name robot3@192.168.15.190:1099/JADE ) )
+ :content  "start" 
+)

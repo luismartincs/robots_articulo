@@ -1,0 +1,23 @@
+//For remote connections
+
+java -cp jade.jar:jSerialComm.jar:. jade.Boot -container -host 192.168.15.190 -port 1099 -agents robot1:RobotAgent
+java -cp jade.jar:jSerialComm.jar:. jade.Boot -container -host 192.168.15.190 -port 1099 -agents camera1:CameraAgent
+
+//For local connections
+
+java -cp jade.jar:jSerialComm.jar:. jade.Boot -agents camera1:CameraAgent -gui
+
+
+javac -cp jade.jar:jSerialComm.jar:. behaviours/CallForPosition.java serial/RobotInterface.java RobotAgent.java CameraAgent.java
+
+//Run all agents for debug
+
+java -cp jade.jar:jSerialComm.jar:. jade.Boot -agents "camera1:CameraAgent;camera2:CameraAgent;robot1:RobotAgent;robot2:RobotAgent;robot3:RobotAgent" -gui
+
+//Remove all class files
+//Linux
+find -name "*.class" -exec rm -R {} \;
+
+//Mac
+find . -type f -regex '.*\.class' -print -exec rm rf {} \;
+
